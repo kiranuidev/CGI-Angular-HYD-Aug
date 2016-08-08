@@ -1,12 +1,17 @@
-<div ng-controller="registerCtrl">
+<div ng-controller="registerCtrl" novalidate>
     <h1>{{pageName}}</h1>
-    <form class="form-horizontal">
+    <form class="form-horizontal" name="registerForm">
         <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-2">First Name</label>
             <div class="col-xs-4">
-                <input type="text" class="form-control" placeholder="First Name" ng-model="user.firstName">
+                <input type="text" class="form-control" name="firstName" placeholder="First Name" ng-model="user.firstName" ng-pattern="/^[a-zA-Z ]*$/" ng-minlength="4" ng-required="true">
 
             </div>
+            <p ng-show="registerForm.firstName.$dirty">
+                <span ng-show="registerForm.firstName.$error.required">First Name Required.</span>
+                <span ng-show="registerForm.firstName.$error.minlength">First Name minimum length is 4.</span>
+                <span ng-show="registerForm.firstName.$error.pattern">Only Alphabets allowed.</span>
+            </p>
         </div>
 
 
@@ -70,7 +75,7 @@
         </div>
         <div class=" form-group ">
             <div class="col-xs-offset-2 col-xs-4 ">
-                <button type="button " class="btn btn-primary " ng-click="register()">Register</button>
+                <button type="button " class="btn btn-primary " ng-disabled="!user.terms" ng-click="register()">Register</button>
             </div>
         </div>
     </form>{{user}}
