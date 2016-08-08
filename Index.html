@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myntra">
 
 <head>
     <link rel="stylesheet" href="content/css/bootstrap.css">
@@ -12,8 +12,12 @@
 
 <body>
     <div class="container">
-
+        <div ng-include="'app/templates/header.html'"></div>
+        <div ui-view></div>
     </div>
+
+    <script src="app/main/main.js"></script>
+    <script src="app/app.js"></script>
 </body>
 
 </html>
