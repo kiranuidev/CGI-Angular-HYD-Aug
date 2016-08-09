@@ -1,6 +1,7 @@
 angular.module("register")
-    .service("registerSvc", [function () {
+    .service("registerSvc", ["$q", function ($q) {
         this.getCountries = function () {
+            var dfd = $q.defer();
             var countries = [{
                     name: "India",
                     code: "IN"
@@ -14,7 +15,14 @@ angular.module("register")
                     code: "US"
                 }];
 
-            return countries;
+            if (countries) {
+                dfd.resolve(countries)
+            } else {
+                dfd.reject("there are no countries");
+            }
+
+
+            return dfd.promise;
         };
 
         this.getStates = function (code) {
@@ -51,6 +59,3 @@ angular.module("register")
             return stateList;
         };
 }]);
-
-
-

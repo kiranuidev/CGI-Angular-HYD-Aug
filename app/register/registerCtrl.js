@@ -4,8 +4,13 @@ angular.module("register")
             $scope.pageName = "Register";
             $scope.user = {};
 
-            $scope.countries = registerSvc.getCountries();
-            console.log($scope.countries);
+            registerSvc.getCountries()
+                .then(function (response) {
+                    console.log(response);
+                }).catch(function (response) {
+                    console.log(response);
+                });
+
 
             $scope.register = function () {
                 console.log($scope.user);
