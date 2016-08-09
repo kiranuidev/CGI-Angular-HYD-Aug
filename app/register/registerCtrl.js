@@ -7,6 +7,7 @@ angular.module("register")
             registerSvc.getCountries()
                 .then(function (response) {
                     console.log(response);
+                    $scope.countries = response;
                 }).catch(function (response) {
                     console.log(response);
                 });

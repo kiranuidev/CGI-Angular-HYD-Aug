@@ -1,8 +1,8 @@
 angular.module("register")
-    .service("registerSvc", ["$q", function ($q) {
+    .service("registerSvc", ["$q", "$http", function ($q, $http) {
         this.getCountries = function () {
             var dfd = $q.defer();
-            var countries = [{
+            /*var countries = [{
                     name: "India",
                     code: "IN"
                 },
@@ -19,8 +19,15 @@ angular.module("register")
                 dfd.resolve(countries)
             } else {
                 dfd.reject("there are no countries");
-            }
-
+            }*/
+            $http.get("app/data/lookup.json")
+                .then(function (response) {
+                    console.log(response);
+                    dfd.resolve(response.data.countries);
+                }).catch(function (response) {
+                    console.log(response);
+                    dfd.reject("Error Occured");
+                });
 
             return dfd.promise;
         };

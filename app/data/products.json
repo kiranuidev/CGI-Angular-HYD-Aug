@@ -1,0 +1,36 @@
+{
+
+    "products": [
+        {
+
+            "model": "Jeans",
+            "name": "Spykar",
+            "description": "This is a slim fit",
+            "price": 2000
+      },
+        {
+            "model": "Jeans",
+            "name": "Levis",
+            "description": "This is a low waist",
+            "price": 2000
+      },
+        {
+            "model": "Saree",
+            "name": "Deisinger Wear",
+            "description": "This is a desinger wear saree",
+            "price": 40000
+      },
+        {
+            "model": "Salwar",
+            "name": "Ethnic wear",
+            "description": "This is a desinger wear saree",
+            "price": 20000
+      },
+        {
+            "model": "frock",
+            "name": "Kids wear",
+            "description": "for a cute kid",
+            "price": 20000
+      }
+    ]
+}
