@@ -1,4 +1,4 @@
-angular.module("myntra", ["main", "ui.router", "register"]);
+angular.module("myntra", ["main", "ui.router", "register", "products"]);
 
 
 //configure routing
@@ -11,7 +11,12 @@ angular.module("myntra")
         var registerObj = {
             templateUrl: "app/templates/register.html"
         };
+        var productsObj = {
+            templateUrl: "app/templates/products.html"
+
+        };
 
         $stateProvider.state("login", loginObj);
         $stateProvider.state("register", registerObj);
+        $stateProvider.state("products", productsObj);
     });
