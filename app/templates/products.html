@@ -1,4 +1,7 @@
 <div ng-controller="productsCtrl">
+    <input type="text" ng-model="search">
+    <input type="text" ng-model="country">
+    <input type="checkbox" ng-model="withBrackets">
     <table class="table table-striped">
         <th>
             <tr>
@@ -6,13 +9,15 @@
                 <td>Name</td>
                 <td>Description</td>
                 <td>Price</td>
+                <td>Phone</td>
             </tr>
         </th>
-        <tr ng-repeat="item in products">
+        <tr ng-repeat="item in products|filter:{price:search}">
             <td></td>
             <td>{{item.name}}</td>
             <td>{{item.description}}</td>
-            <td>{{item.price}}</td>
+            <td>{{item.price|currency:"Rs."}}</td>
+            <td>{{item.phone|phoneformat:country:withBrackets}}</td>
         </tr>
 
     </table>

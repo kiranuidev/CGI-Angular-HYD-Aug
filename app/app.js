@@ -1,4 +1,4 @@
-angular.module("myntra", ["main", "ui.router", "register", "products"]);
+angular.module("myntra", ["main", "ui.router", "register", "products", "components"]);
 
 
 //configure routing

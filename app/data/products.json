@@ -6,31 +6,36 @@
             "model": "Jeans",
             "name": "Spykar",
             "description": "This is a slim fit",
-            "price": 2000
+            "price": 2000,
+            "phone": "9939333333"
       },
         {
             "model": "Jeans",
             "name": "Levis",
             "description": "This is a low waist",
-            "price": 2000
+            "price": 2000,
+            "phone": "9939333345"
       },
         {
             "model": "Saree",
             "name": "Deisinger Wear",
             "description": "This is a desinger wear saree",
-            "price": 40000
+            "price": 40000,
+            "phone": "9959688870"
       },
         {
             "model": "Salwar",
             "name": "Ethnic wear",
             "description": "This is a desinger wear saree",
-            "price": 20000
+            "price": 20000,
+            "phone": "1211218909"
       },
         {
             "model": "frock",
             "name": "Kids wear",
             "description": "for a cute kid",
-            "price": 20000
+            "price": 20000,
+            "phone": "0123456789"
       }
     ]
 }
