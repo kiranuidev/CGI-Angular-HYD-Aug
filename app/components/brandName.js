@@ -1,8 +1,11 @@
 angular.module("components")
     .directive("brandName", [function () {
         return {
-            template: "CGI",
-            restrict: "C"
+            template: "{{companyName}}",
+            restrict: "A",
+            scope: {
+                companyName: "@" //one way communication.
+            }
         };
 
 }]);

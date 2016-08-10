@@ -13,13 +13,21 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" ng-controller="mainCtrl">
         <div custom-header></div>
+        <div custom-trans>
+            <h1>I am good</h1>
+        </div>
+        <!--<div custom-details content-to-display="data" label-to-display="{{label}}"></div>
+<h1>In the index page</h1>
+<input type="text" ng-model="data">
+<input type="text" ng-model="label" placeholder="label">{{label}}-->
         <div ui-view></div>
     </div>
 
     <script src="app/products/products.js"></script>
     <script src="app/products/productsCtrl.js"></script>
+    <script src="app/products/cartCtrl.js"></script>
     <script src="app/products/productsSvc.js"></script>
 
     <script src="app/register/register.js"></script>
@@ -31,8 +39,12 @@
     <script src="app/components/alphabetsOnly.js"></script>
     <script src="app/components/brandName.js"></script>
     <script src="app/components/cgiDatePicker.js"></script>
+    <script src="app/components/customDetails.js"></script>
+    <script src="app/components/customTrans.js"></script>
+
 
     <script src="app/main/main.js"></script>
+    <script src="app/main/mainCtrl.js"></script>
     <script src="app/app.js"></script>
 </body>
 
