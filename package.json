@@ -1,0 +1,25 @@
+{
+  "name": "myntra",
+  "version": "1.0.0",
+  "description": "this is an awesome app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiranuidev/CGI-Angular-HYD-Aug.git"
+  },
+  "author": "kiran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiranuidev/CGI-Angular-HYD-Aug/issues"
+  },
+  "homepage": "https://github.com/kiranuidev/CGI-Angular-HYD-Aug#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.1",
+    "jshint": "^2.9.2"
+  }
+}

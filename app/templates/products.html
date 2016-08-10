@@ -14,10 +14,14 @@
         </th>
         <tr ng-repeat="item in products|filter:{price:search}">
             <td></td>
-            <td>{{item.name}}</td>
-            <td>{{item.description}}</td>
-            <td>{{item.price|currency:"Rs."}}</td>
-            <td>{{item.phone|phoneformat:country:withBrackets}}</td>
+            <td>{{::item.name}}</td>
+            <td>{{::item.description}}</td>
+            <td>{{::item.price|currency:"Rs."}}</td>
+            <td>{{::item.phone|phoneformat:country:withBrackets}}</td>
+            <td>
+                <button class="btn btn-primary" ng-if="item.selected==false||item.selected==undefined" ng-click="addProduct(item);item.selected=true">Add Product</button>
+                <button class="btn btn-primary" ng-if="item.selected" ng-click="removeProduct(item);item.selected=false">Remove Product</button>
+            </td>
         </tr>
 
     </table>
